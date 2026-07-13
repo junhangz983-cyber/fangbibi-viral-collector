@@ -1,0 +1,5 @@
+interface:
+  display_name: "方比比爆款采集"
+  short_description: "按关键词或对标账号采集爆款，统一落到飞书多维表格"
+  default_prompt: "Use $fangbibi-viral-collector to collect benchmark viral posts from keywords or target accounts, then normalize them for Feishu Base."
+
