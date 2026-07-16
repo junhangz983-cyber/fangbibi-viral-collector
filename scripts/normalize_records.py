@@ -15,7 +15,7 @@ FIELDS = [
     "标题",
     "链接",
     "平台",
-    "账号",
+    "对标账号",
     "发布时间",
     "点赞",
     "收藏",
@@ -197,7 +197,7 @@ def normalize_record(record: Dict[str, Any], default_platform: str) -> Dict[str,
         "标题": title,
         "链接": link,
         "平台": platform,
-        "账号": account,
+        "对标账号": account,
         "发布时间": publish_time,
         "点赞": str(like_count),
         "收藏": str(favorite_count),
@@ -212,7 +212,7 @@ def dedupe_rows(rows: Iterable[Dict[str, str]]) -> List[Dict[str, str]]:
     seen = set()
     result: List[Dict[str, str]] = []
     for row in rows:
-        key = row["链接"] or f'{row["标题"]}|{row["账号"]}|{row["发布时间"]}'
+        key = row["链接"] or f'{row["标题"]}|{row["对标账号"]}|{row["发布时间"]}'
         if key in seen:
             continue
         seen.add(key)

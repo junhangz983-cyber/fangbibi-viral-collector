@@ -15,6 +15,8 @@ tmp/
 *.sqlite3
 *.csv
 *.json
+!config/
+!config/mother_topics.json
+config/recent_mother_topics.json
 *.jsonl
 MediaCrawler/
-
